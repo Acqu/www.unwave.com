@@ -1,0 +1,369 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    background-color: #f8f8f8;
+    padding: 10px 20px; /* Added padding for better spacing */
+}
+
+.left {
+    display: flex; /* Use flexbox for the left section */
+    align-items: center; /* Center items vertically */
+}
+
+.site-logo {
+    width: 80px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.right {
+    display: flex; /* Use flexbox for the right section */
+}
+
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Display links in a row */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+    .nav-links li {
+        margin-left: 20px; /* Space between links */
+    }
+
+    .nav-links a {
+        text-decoration: none; /* Remove underline */
+        color: #333; /* Link color */
+        font-weight: bold; /* Bold links */
+    }
+
+        .nav-links a:hover {
+            color: #ff4081; /* Change color on hover */
+        }
+
+.left a, .right a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-buttons {
+    position: absolute; /* Position buttons absolutely within the product card */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    display: none; /* Hide by default */
+}
+
+.nav-button {
+    background-color: #ff4081; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px 10px; /* Button padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 0 5px; /* Space between buttons */
+}
+
+    .nav-button:hover {
+        background-color: #e91e63; /* Darker shade on hover */
+    }
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.product-details {
+    text-align: center;
+}
+
+.category {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+    .category img {
+        width: 100px;
+        height: auto;
+    }
+
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero-banner {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    padding: 20px; /* Add padding around the banner */
+}
+
+    .hero-banner h1 {
+        margin: 0; /* Remove default margin */
+        font-size: 2.5em; /* Adjust font size as needed */
+    }
+
+    .hero-banner p {
+        margin-top: 10px; /* Space between h1 and p */
+        font-size: 1.2em; /* Adjust font size as needed */
+        color: #666; /* Change color if desired */
+    }
+
+.site-logo {
+    width: 50px; /* Adjust logo size */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.promotional-image {
+    width: 100%; /* Make the promotional image cover the full width */
+    overflow: hidden; /* Hide any overflow */
+    position: relative; /* Position relative for absolute positioning of the button */
+}
+
+    .promotional-image img {
+        width: 100%; /* Make the image fill the container */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove bottom space/gap */
+    }
+
+    .promotional-image .btn {
+        position: absolute; /* Position the button over the image */
+        bottom: 20px; /* Position it near the bottom */
+        left: 50%; /* Center it horizontally */
+        transform: translateX(-50%); /* Adjust for centering */
+        background-color: #ff4081; /* Button background color */
+        color: white; /* Button text color */
+        padding: 10px 20px; /* Button padding */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Rounded corners */
+        text-decoration: none; /* Remove underline */
+        font-weight: bold; /* Bold text */
+        transition: background-color 0.3s; /* Smooth transition for hover effect */
+    }
+
+        .promotional-image .btn:hover {
+            background-color: #e91e63; /* Darker shade on hover */
+        }
+
+.featured-categories {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.category-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    overflow: hidden; /* Hide overflow */
+}
+
+.category-list {
+    display: flex;
+    transition: transform 0.3s ease; /* Smooth transition for scrolling */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.category-item {
+    flex: 0 0 100px; /* Fixed width for each category item */
+    height: 100px; /* Fixed height for each category item */
+    margin: 0 10px; /* Space between items */
+    text-align: center;
+    border: 5px solid #ff4081; /* Border color */
+    border-radius: 50%; /* Make it circular */
+    overflow: hidden; /* Ensure the image fits within the frame */
+    background-color: #fff; /* Background color for the circle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    position: relative; /* For positioning the text */
+}
+
+    .category-item img {
+        width: 100%; /* Make the image fill the category item */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 50%; /* Make the image circular */
+        object-fit: cover; /* Ensure the image covers the circle */
+    }
+
+    .category-item h3 {
+        position: absolute; /* Position the text over the image */
+        bottom: 10px; /* Position it at the bottom */
+        left: 50%; /* Center it horizontally */
+        transform: translateX(-50%); /* Adjust for centering */
+        color: #333; /* Text color */
+        font-weight: bold; /* Make the text bold */
+    }
+
+.scroll-button {
+    background-color: #ff4081; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Button padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 18px; /* Font size */
+}
+
+    .scroll-button:hover {
+        background-color: #e91e63; /* Darker shade on hover */
+    }
+
+.featured-products {
+    margin: 40px 0;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    position: relative; /* Position relative for absolute positioning of related products */
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    overflow: hidden; /* Hide overflow */
+}
+
+    .product-card .main-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+.related-products {
+    display: none; /* Hide related products by default */
+    position: absolute; /* Position absolutely within the product card */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width of the product card */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    padding: 10px; /* Padding around related products */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+.product-card:hover .related-products {
+    display: block; /* Show related products on hover */
+}
+
+.related-image {
+    width: 100%; /* Make related images fill the container */
+    height: auto; /* Maintain aspect ratio */
+    margin: 5px 0; /* Space between related images */
+    border-radius: 5px; /* Rounded corners */
+}
+
+footer {
+    text-align: center; /* Center text in the footer */
+    padding: 10px 0; /* Add padding to the footer */
+    background-color: #f8f8f8; /* Optional: Set a background color for the footer */
+    position: relative; /* Position relative for absolute positioning of the GIF */
+    z-index: 1; /* Ensure footer is above other content */
+}
+
+.footer-gif {
+    position: relative; /* Change to relative to keep it in the document flow */
+    overflow: hidden; /* Hide overflow */
+}
+
+    .footer-gif img {
+        width: 100%; /* Stretch the GIF to full width */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 300px; /* Set a maximum height for the GIF */
+        display: block; /* Remove bottom space/gap */
+        margin-bottom: -20px; /* Adjust this value to control overlap with the footer */
+    }
+
+/*//loading screen*/
+.loading-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f8f8f8; /* Background color */
+}
+
+.loading-progress {
+    width: 100px; /* Width of the SVG */
+    height: 100px; /* Height of the SVG */
+    position: relative;
+}
+
+.progress-circle {
+    fill: none;
+    stroke: #1b6ec2; /* Color of the progress bar */
+    stroke-width: 10;
+    stroke-dasharray: 251.2; /* Circumference of the circle */
+    stroke-dashoffset: 0; /* Start with no offset */
+    animation: progress-animation 2s linear infinite; /* Animation */
+}
+
+@keyframes progress-animation {
+    0% {
+        stroke-dashoffset: 251.2; /* Start from full */
+    }
+
+    100% {
+        stroke-dashoffset: 0; /* End at empty */
+    }
+}
+
+.logo {
+    width: 80px; /* Adjust logo size */
+    margin: 20px 0; /* Space between logo and text */
+}
+
+.loading-progress-text {
+    font-size: 18px; /* Font size for loading text */
+    color: #333; /* Text color */
+    animation: fade-in 1s infinite alternate; /* Animation for text */
+}
+.social-media-animation {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the icons */
+    margin: 20px 0; /* Space around the icons */
+}
+
+.social-icon {
+    font-size: 24px; /* Size of the icons */
+    color: #333; /* Default color */
+    margin: 0 15px; /* Space between icons */
+    transition: transform 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+    .social-icon:hover {
+        transform: scale(1.2); /* Scale up on hover */
+        color: #ff4081; /* Change color on hover */
+    }
+
+@keyframes fade-in {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

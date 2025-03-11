@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <title>Unwave</title>
+    <base href="/" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link href="manifest.webmanifest" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.PNG" />
+    <link rel="apple-touch-icon" sizes="192x192" href="icon-192.PNG" />
+</head>
+
+<body>
+    <div id="app">
+        <div class="loading-screen">
+            <svg class="loading-progress">
+                <circle class="progress-circle" r="40%" cx="50%" cy="50%" />
+                <circle class="progress-circle" r="40%" cx="50%" cy="50%" />
+            </svg>
+            <img src="Images/icon- 192.PNG" alt="Unwave" class="logo" />
+            <div class="loading-progress-text">We Impress By Living...</div>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="." class="reload">Reload</a>
+        <span class="dismiss">🗙</span>
+    </div>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script>navigator.serviceWorker.register('service-worker.js');</script>
+    <script>
+        function sendToWhatsApp(productDetails) {
+            var url = "https://api.whatsapp.com/send?phone=0598185513&text=" + encodeURIComponent(productDetails);
+            window.open(url, '_blank');
+        }
+    </script>
+    <script>
+        function scrollCategories(containerId, direction) {
+            const container = document.getElementById(containerId);
+            const scrollAmount = 150; // Amount to scroll
+            container.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth' // Smooth scrolling
+            });
+        }
+    </script>
+</body>
+</html>
